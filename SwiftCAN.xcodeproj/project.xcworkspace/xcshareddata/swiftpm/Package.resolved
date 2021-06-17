@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "MacCAN-TouCAN",
+        "repositoryURL": "https://github.com/mac-can/RusokuCAN.git",
+        "state": {
+          "branch": "master",
+          "revision": "25889c71a373229e59bd44622072e01af85de37b",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
