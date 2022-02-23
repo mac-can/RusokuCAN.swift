@@ -71,7 +71,7 @@ if let libraryInfo = can.libraryInfo {
     print(">>> Library: id=\(libraryInfo.id) name=\"\(libraryInfo.name)\" vendor=\"\(libraryInfo.vendor)\"")
 }
 if let deviceInfo = can.deviceInfo {
-    print(">>> Device : type=\(deviceInfo.type) name=\"\(deviceInfo.name)\" vendor=\"\(deviceInfo.vendor)\"")
+    print(">>> Device : channel=\(deviceInfo.channel) name=\"\(deviceInfo.name)\" vendor=\"\(deviceInfo.vendor)\"")
 }
 if let capa = can.capability {
     print(">>> Op-Capa: FDOE=\(capa.isFdOperationEnabled) BRSE=\(capa.isBitrateSwitchingEnabled) NISO=\(capa.isNonIsoOperationEnabled) SHRD=\(capa.isSharedAccessEnabled) NXTD=\(capa.isExtendedFramesDisabled) NRTR=\(capa.isRemoteFramesDisabled) ERR=\(capa.isErrorFramesEnabled) MON=\(capa.isMonitorModeEnabled)")

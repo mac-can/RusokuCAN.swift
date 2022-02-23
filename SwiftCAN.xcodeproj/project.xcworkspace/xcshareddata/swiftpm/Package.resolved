@@ -3,10 +3,10 @@
     "pins": [
       {
         "package": "MacCAN-TouCAN",
-        "repositoryURL": "https://github.com/mac-can/RusokuCAN.git",
+        "repositoryURL": "https://github.com/mac-can/RusokuCAN.dylib",
         "state": {
-          "branch": "master",
-          "revision": "d93fbfe0818779987b4a87f9e5b1d23c30961cca",
+          "branch": "main",
+          "revision": "926c448e8a02a27ea2dc4091d16d02df6822d89c",
           "version": null
         }
       }
