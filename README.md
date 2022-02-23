@@ -1,6 +1,6 @@
 ### Swift Demo Program for Rusoku TouCAN USB Interfaces (macOS&reg;)
 
-_Copyright &copy; 2021  Uwe Vogt, UV Software, Berlin (info@mac-can.com)_
+_Copyright &copy; 2021-2022  Uwe Vogt, UV Software, Berlin (info@mac-can.com)_
 
 # Running CAN on Mac&reg;
 
@@ -9,7 +9,7 @@ The macOS driver for TouCAN USB interfaces from [Rusoku](https://www.rusoku.com)
 
 ## SwiftCAN-TouCAN
 
-This repo contains only a little example program that uses the [MacCAN-TouCAN](https://github.com/mac-can/RusokuCAN/)  Swift Wrapper as a required package dependency.
+This repo contains only a little example program that uses the [MacCAN-TouCAN](https://github.com/mac-can/RusokuCAN.dylib/)  Swift Wrapper as a required package dependency.
 Feel free to modify the program.
 
 ### MacCAN-TouCAN Swift Wrapper
@@ -18,11 +18,11 @@ Visit my [GitHub Pages](https://mac-can.github.io/drivers/RusokuCAN/) to learn m
 
 ### Supported TouCAN Hardware
 
-- TouCAN USB (Model F4FS1)
+TouCAN USB (Model F4FS1)
 
 ## Known Bugs and Caveats
 
-- For a list of known bugs and caveats see tab [Issues](https://github.com/mac-can/RusokuCAN/issues) in the GitHub repo.
+For a list of known bugs and caveats see tab [Issues](https://github.com/mac-can/RusokuCAN.dylib/issues) in the GitHub repo.
 
 ## This and That
 
@@ -76,6 +76,4 @@ _If you connect your CAN device to a real CAN network when using this library, y
 ### Contact
 
 E-Mail: mailto://info@mac.can.com \
-Internet: https://www.mac-can.com
-
-##### *Enjoy!*
+Internet: https://www.mac-can.net
