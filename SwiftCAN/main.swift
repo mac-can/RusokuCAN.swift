@@ -8,7 +8,7 @@ import Foundation
 import TouCAN
 
 print("\(try CanApi.GetVersion())")
-print("Copyright (c) 2021 Uwe Vogt, UV Software, Berlin")
+print("Copyright (c) 2021-2022 Uwe Vogt, UV Software, Berlin")
 print("")
 print("This program is free software: you can redistribute it and/or modify")
 print("it under the terms of the GNU General Public License as published by")
@@ -24,7 +24,7 @@ print("You should have received a copy of the GNU General Public License")
 print("along with this program.  If not, see <http://www.gnu.org/licenses/>.")
 print("")
 
-let can = TouCAN()
+let can = CanApi()
 let channel: Int32 = 0
 let mode: CanApi.Mode = [.DefaultOperationMode]
 let baud: CanApi.CiaIndex = .Index250kbps
@@ -34,19 +34,21 @@ var n = 0
 if let version = can.wrapperVersion {
     print(">>> Version: major=\(version.major) minor=\(version.minor) patch=\(version.patch)")
 }
-//if let canApiVersion = can.canApiVersion {
-//    print(">>> CAN API: major=\(canApiVersion.major) minor=\(canApiVersion.minor) patch=\(canApiVersion.patch)")
-//}
-//if let libraryVersion = can.libraryVersion {
-//    print(">>> Library: major=\(libraryVersion.major) minor=\(libraryVersion.minor) patch=\(libraryVersion.patch)")
-//}
-//if let libraryInfo = can.libraryInfo {
-//    print(">>> Library: id=\(libraryInfo.id) name=\"\(libraryInfo.name)\" vendor=\"\(libraryInfo.vendor)\"")
-//}
-//for x in TouCanChannel.allCases {
-//    let state = try TouCAN.ProbeChannel(channel: x.rawValue, mode: mode)
-//    print(">>> ProbeChannel(\(x.rawValue)): \(x.description) -> (\(state.description))")
-//}
+if let canApiVersion = can.canApiVersion {
+    print(">>> CAN API: major=\(canApiVersion.major) minor=\(canApiVersion.minor) patch=\(canApiVersion.patch)")
+}
+if let libraryVersion = can.libraryVersion {
+    print(">>> Library: major=\(libraryVersion.major) minor=\(libraryVersion.minor) patch=\(libraryVersion.patch)")
+}
+if let libraryInfo = can.libraryInfo {
+    print(">>> Library: id=\(libraryInfo.id) name=\"\(libraryInfo.name)\" vendor=\"\(libraryInfo.vendor)\"")
+}
+if let info = try? CanApi.GetFirstChannel() {
+    print(">>> Device: channel=\(info.channel), name=\(info.name), vendor=\(info.vendor), library=\(info.library), driver=\(info.driver)")
+    while let info = try? CanApi.GetNextChannel() {
+        print(">>> Device: channel=\(info.channel), name=\(info.name), vendor=\(info.vendor), library=\(info.library), driver=\(info.driver)")
+    }
+}
 do {
     step = "InitializeChannel"
     print(">>> \(step)(channel: \(channel), mode: \(mode))")
@@ -60,15 +62,6 @@ do {
 } catch {
     print("+++ error:   \(step) returned \(error)")
     exit(1)
-}
-if let canApiVersion = can.canApiVersion {
-    print(">>> CAN API: major=\(canApiVersion.major) minor=\(canApiVersion.minor) patch=\(canApiVersion.patch)")
-}
-if let libraryVersion = can.libraryVersion {
-    print(">>> Library: major=\(libraryVersion.major) minor=\(libraryVersion.minor) patch=\(libraryVersion.patch)")
-}
-if let libraryInfo = can.libraryInfo {
-    print(">>> Library: id=\(libraryInfo.id) name=\"\(libraryInfo.name)\" vendor=\"\(libraryInfo.vendor)\"")
 }
 if let deviceInfo = can.deviceInfo {
     print(">>> Device : channel=\(deviceInfo.channel) name=\"\(deviceInfo.name)\" vendor=\"\(deviceInfo.vendor)\"")
