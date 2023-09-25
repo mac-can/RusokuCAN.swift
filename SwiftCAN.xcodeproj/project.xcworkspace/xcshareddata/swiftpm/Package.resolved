@@ -1,16 +1,14 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "MacCAN-TouCAN",
-        "repositoryURL": "https://github.com/mac-can/RusokuCAN.dylib",
-        "state": {
-          "branch": "main",
-          "revision": "926c448e8a02a27ea2dc4091d16d02df6822d89c",
-          "version": null
-        }
+  "pins" : [
+    {
+      "identity" : "rusokucan.dylib",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mac-can/RusokuCAN.dylib",
+      "state" : {
+        "branch" : "main",
+        "revision" : "032d7bc7d58aa9c1994e0c94752bd3894c446f05"
       }
-    ]
-  },
-  "version": 1
+    }
+  ],
+  "version" : 2
 }
