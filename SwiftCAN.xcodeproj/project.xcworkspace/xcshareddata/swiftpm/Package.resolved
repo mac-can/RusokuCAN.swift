@@ -1,4 +1,5 @@
 {
+  "originHash" : "2ab5d155970c3eccaa9ce1df9a3f44e5b2a4b2990d85fe4dcfb65a8e7c5f0a98",
   "pins" : [
     {
       "identity" : "rusokucan.dylib",
@@ -6,9 +7,9 @@
       "location" : "https://github.com/mac-can/RusokuCAN.dylib",
       "state" : {
         "branch" : "main",
-        "revision" : "032d7bc7d58aa9c1994e0c94752bd3894c446f05"
+        "revision" : "e8ab458caa24cd0b227a265a0018156d54db36c0"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

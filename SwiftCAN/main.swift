@@ -2,13 +2,13 @@
 //
 //  main.swift
 //  SwiftCAN-TouCAN
-//  Copyright (c) 2021-2023 Uwe Vogt, UV Software, Berlin
+//  Copyright (c) 2021-2024 Uwe Vogt, UV Software, Berlin
 //
 import Foundation
 import TouCAN
 
 print("\(try CanApi.GetVersion())")
-print("Copyright (c) 2021-2023 Uwe Vogt, UV Software, Berlin")
+print("Copyright (c) 2021-2024 Uwe Vogt, UV Software, Berlin")
 print("")
 print("This program is free software: you can redistribute it and/or modify")
 print("it under the terms of the GNU General Public License as published by")
@@ -21,7 +21,7 @@ print("MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the")
 print("GNU General Public License for more details.")
 print("")
 print("You should have received a copy of the GNU General Public License")
-print("along with this program.  If not, see <http://www.gnu.org/licenses/>.")
+print("along with this program.  If not, see <https://www.gnu.org/licenses/>.")
 print("")
 
 let can = CanApi()
